@@ -1,0 +1,14 @@
+{{> header}}
+
+<div class="weather-info">
+  {{#if error}}
+    <p class="error">{{error}}</p>
+  {{else}}
+    <h2 class="city">{{city}}</h2>
+    <div class="temp">{{temp}}°C</div>
+    <div class="description">{{description}}</div>
+    <img src="{{icon}}" alt="weather icon">
+  {{/if}}
+</div>
+
+{{> footer}}

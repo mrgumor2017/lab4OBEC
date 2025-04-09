@@ -1,0 +1,24 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<h1>Weather App KPI</h1>
+
+<script>
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          window.location.href = `/weather/geo?lat=${lat}&lon=${lon}`;
+        },
+        (error) => {
+          alert("Не вдалося отримати місцезнаходження.");
+        }
+      );
+    } else {
+      alert("Ваш браузер не підтримує геолокацію.");
+    }
+  }
+</script>
